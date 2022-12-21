@@ -1,11 +1,10 @@
 function printTable(gifts) {
   let table = "";
-  gifts = [{ name: "Gift", quantity: 11111111 }, ...gifts];
-  const maxNameLength = Math.max(...gifts.map((gift) => gift.name.length));
+  const maxNameLength = Math.max(4, ...gifts.map((gift) => gift.name.length));
   const maxQuantityLength = Math.max(
+    8,
     ...gifts.map((gift) => gift.quantity.toString().length)
   );
-  gifts.shift();
   table += "+".repeat(7 + maxNameLength + maxQuantityLength) + "\n";
   table +=
     "| Gift" +
